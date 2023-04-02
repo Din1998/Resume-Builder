@@ -10,8 +10,8 @@ export default function Home() {
         <div className="hero__text">
           <h1>The Resume that gets in munities</h1>
         </div>
-        <div>
-          <button className="btn-hero__btn">Create resume</button>
+        <div className="hero__btn">
+          <button className="btn-hero__btn">Create Resume</button>
         </div>
       </div>
     </div>

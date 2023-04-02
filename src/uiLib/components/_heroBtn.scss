@@ -1,7 +1,11 @@
 .btn-hero__btn{
   background-color: $base--btn-color;
   border: none;
-  padding: 20px;
+  height: 42px;
+  width: 160px;
   border-radius: 8px;
   cursor: pointer;
+  font-family: $base-Font;
+  font-size: 16px;
+  font-weight: 600;
 }

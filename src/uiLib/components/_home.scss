@@ -2,10 +2,13 @@
   background-color: $base--background;
   color: $base--text-color;
   font-family: $base-Font;
-  height: 100vh;
+ 
   padding: $base--padding;
   .hero__text{
-    font-size: 40px;
+    font-size: 36px;
     width: 500px;
+  }
+  .hero__btn{
+    padding: 24px 0px;
   }
 }

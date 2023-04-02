@@ -14,24 +14,34 @@
 }
 .navbar .logo {
   padding: 0 0 0 40px;
+  color: #CBE4DE;
+}
+.navbar .logo h2 {
+  font-size: 40px;
 }
 
 .home {
   background-color: #2C3333;
   color: #0E8388;
   font-family: Poppins;
-  height: 100vh;
   padding: 4rem;
 }
 .home .hero__text {
-  font-size: 40px;
+  font-size: 36px;
   width: 500px;
+}
+.home .hero__btn {
+  padding: 24px 0px;
 }
 
 .btn-hero__btn {
   background-color: #CBE4DE;
   border: none;
-  padding: 20px;
+  height: 42px;
+  width: 160px;
   border-radius: 8px;
   cursor: pointer;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
 }
