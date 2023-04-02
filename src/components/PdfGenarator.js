@@ -19,8 +19,8 @@ const style = StyleSheet.create({
     margin: 10,
   },
   viewer : {
-    width: window.innerWidth / 3,
-    height: window.innerHeight / 2
+    width: 600,
+    height: 600,
   }
 })
 
@@ -29,7 +29,10 @@ export default function PdfGenarator(){
   return(
     <PDFViewer style={style.viewer}>
       <Document>
-        <Page size="A4" style={style.Page}>
+        <Page>
+          <View style={style.section}>
+            <Text>Helllowww</Text>
+          </View>
           <View style={style.section}>
             <Text>Helllowww</Text>
           </View>

@@ -82,10 +82,6 @@
 .input__section .input__page--container .live__priview--section {
   width: 50%;
 }
-.input__section .input__page--container .live__priview--section .live__preview--comp {
-  max-height: 600px;
-  overflow-y: scroll;
-}
 
 .text__input {
   width: 240px;
