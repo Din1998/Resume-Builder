@@ -2,3 +2,12 @@
   margin: 0;
   padding: 0;
 }
+// variables
+@import './variable.scss';
+
+
+// components
+
+@import './components/navBar.scss';
+@import './components/home';
+@import './components/heroBtn';

@@ -1,4 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
   margin: 0;
   padding: 0;
+}
+
+.navbar {
+  background-color: #2E4F4F;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.navbar .logo {
+  padding: 0 0 0 40px;
+}
+
+.home {
+  background-color: #2C3333;
+  color: #0E8388;
+  font-family: Poppins;
+  height: 100vh;
+  padding: 4rem;
+}
+.home .hero__text {
+  font-size: 40px;
+  width: 500px;
+}
+
+.btn-hero__btn {
+  background-color: #CBE4DE;
+  border: none;
+  padding: 20px;
+  border-radius: 8px;
+  cursor: pointer;
 }

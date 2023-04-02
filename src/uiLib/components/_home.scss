@@ -1,0 +1,11 @@
+.home{
+  background-color: $base--background;
+  color: $base--text-color;
+  font-family: $base-Font;
+  height: 100vh;
+  padding: $base--padding;
+  .hero__text{
+    font-size: 40px;
+    width: 500px;
+  }
+}

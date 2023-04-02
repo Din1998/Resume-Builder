@@ -1,10 +1,13 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Navbar from './components/Navbar';
+import Home from './page/Home';
 
 function App() {
   return (
     <div className="App">
-     <h1> I'm resume builder</h1>
+      <Navbar />
+      <Home />
     </div>
   );
 }
