@@ -1,4 +1,24 @@
 .input__section{
-  height: 100vh;
+  font-family: $base-Font;
+  padding: $base--padding;
   background-color: $base--input-page-backgrount;
+  .input__page--title{
+    padding: 40px 0px;
+    text-align: center;
+   
+  }
+
+  .input__page--container{
+    display: flex;
+    .input__groups{
+      width: 50%;
+    }
+    .live__priview--section{
+      .live__preview--comp{
+        max-height: 600px;overflow-y: scroll;
+      }
+     
+      width: 50%;
+    }
+  }
 }
