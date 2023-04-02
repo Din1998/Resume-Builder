@@ -65,6 +65,38 @@
 }
 
 .input__section {
-  height: 100vh;
+  font-family: Poppins;
+  padding: 4rem;
   background-color: #CBE4DE;
+}
+.input__section .input__page--title {
+  padding: 40px 0px;
+  text-align: center;
+}
+.input__section .input__page--container {
+  display: flex;
+}
+.input__section .input__page--container .input__groups {
+  width: 50%;
+}
+.input__section .input__page--container .live__priview--section {
+  width: 50%;
+}
+.input__section .input__page--container .live__priview--section .live__preview--comp {
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
+.text__input {
+  width: 240px;
+  height: 32px;
+  margin: 12px;
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid #0E8388;
+}
+
+.live__preview {
+  background-color: whitesmoke;
+  height: 100vh;
 }
