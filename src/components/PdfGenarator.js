@@ -4,38 +4,47 @@ import {
   Page,
   View,
   StyleSheet,
-  PDFViewer
+  PDFViewer,Font
 
 } from "@react-pdf/renderer"
 
 
 const style = StyleSheet.create({
   Page: {
-    backgroundColor: "#000",
-    color: "Black"
+    backgroundColor: "#fff",
+    color: "black",
+    flex: true,
   },
 
   section: {
-    margin: 10,
+    padding: 40,
+   
   },
   viewer : {
     width: 600,
     height: 600,
+  },
+  text: {
+    justifyContent: 'center',
+    display: 'flex',
   }
+
 })
 
 
-export default function PdfGenarator(){
+export default function PdfGenarator({input}){
   return(
     <PDFViewer style={style.viewer}>
       <Document>
-        <Page>
+        <Page style={style.Page}>
           <View style={style.section}>
-            <Text>Helllowww</Text>
+            <Text style={style.text} >{input}</Text>
+            <Text style={style.text} >Helllowww</Text>
+              <View >
+                <Text>Helllowww</Text>
+              </View>
           </View>
-          <View style={style.section}>
-            <Text>Helllowww</Text>
-          </View>
+          
         </Page>
       </Document>
     </PDFViewer>
