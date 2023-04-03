@@ -1,13 +1,36 @@
-import LivePreview from "../components/LivePreview";
+
 import { useState } from "react";
 import TextEditor from "../components/TextEditor";
+import LiveView from "../components/LiveView";
 
 export default function() {
-  const [input,setInput] = useState("")
-  console.log(input)
-  const handleSubmit = (value) =>{
-    setInput(value)
+
+
+  const [personalInfo,setInput] = useState({
+    fristName:"",
+    lastName: "",
+    city: "",
+    country: "",
+    zipCode: "",
+    phone: "",
+    email: "",
+    companyName:"",
+    jobTitle:"",
+    jobResponse: "",
+    startDate: "",
+    endDate: "",
+    schoolName: "",
+    subject:"",
+    gpa: "",
+    passingYear:"",
+
+  })
+  // console.log(input)
+  const handleChange = (e) => {
+    setInput((prev) => ({...prev,[e.target.name]:e.target.value}))
   }
+
+
 
   return(
     <div className="input__section">
@@ -17,46 +40,144 @@ export default function() {
        <div className="input__page--container">
           <div className="input__groups">
             <div>
-              <h2>Personal Info</h2>
+              <p>Personal Info</p>
+              <form >
+                <input 
+                  className="text__input"
+                  placeholder="Frist Name"
+                  type="text"
+                  name="fristName"
+                  onChange={handleChange}
+                />
+                <input 
+                  className="text__input" 
+                  placeholder="Last name"  
+                  type="text"
+                  name="lastName"
+                  onChange={handleChange}
+                  />
+                 <input 
+                  className="text__input" 
+                  placeholder="City" 
+                  type="text"
+                  name="city"
+                  onChange={handleChange}/>
+                <input 
+                  className="text__input" 
+                  placeholder="Zip Code" 
+                  type="text"
+                  name="zipeCode"
+                  onChange={handleChange}
+                  />
+               
+                <input 
+                  className="text__input" 
+                  placeholder="Country" 
+                  type="text"
+                  name="country"
+                onChange={handleChange}/>
+                <input 
+                  className="text__input" 
+                  placeholder="Phone" 
+                  type="text"
+                  name="phone"
+                onChange={handleChange}/>
+                <input 
+                  className="text__input" 
+                  placeholder="Email" 
+                  type="email"
+                  name="email"
+                  onChange={handleChange}/>
+              </form>
+             
+            </div>
+            <div>
+              <p>Expriance</p>
+              <form>
               <input 
-              className="text__input"
-              placeholder="Frist Name"
-              type="text"
-              value={input}
-              onChange={(e) => handleSubmit(e.target.value)}
+                className="text__input" 
+                placeholder="Company Name" 
+                type="text"
+                name="companyName"
+                onChange={handleChange}
+                />
+              <input 
+                className="text__input" 
+                placeholder="Job Title" 
+                type="text"
+                name="jobTitle"
+                onChange={handleChange}
+                />
+              <input 
+                className="text__input" 
+                placeholder="Start Date" 
+                type="date"
+                name="startDate"
+                onChange={handleChange}
+                />
+              <input 
+                className="text__input" 
+                placeholder="End Date" 
+                type="date"
+                name="endDate"
+                onChange={handleChange}
+                />
+              <textarea 
+                className="input__textArea"
+                placeholder="Write you job responsiblity"
+                name="jobResponse"
+                onChange={handleChange}
               />
-              <input className="text__input" placeholder="Last name"  />
-              <input className="text__input" placeholder="Address" />
-              <input className="text__input" placeholder="Zip Code" />
-              <input className="text__input" placeholder="City" />
-              <input className="text__input" placeholder="Country" />
-              <input className="text__input" placeholder="Phone" />
-              <input className="text__input" placeholder="Email" />
+              </form>
             </div>
             <div>
-              <h2>Expriance</h2>
-              <input className="text__input" placeholder="Company Name" />
-              <input className="text__input" placeholder="Job Title" />
-              <input className="text__input" placeholder="Start Date" />
-              <input className="text__input" placeholder="End Date" />
+              <p>Graduation</p>
+              <form>
+              <input 
+                className="text__input" 
+                type="text"
+                name="schoolName"
+                placeholder="School Name" 
+                onChange={handleChange}
+                />
+              <input 
+                className="text__input"
+                type="text"
+                name="subject"
+                placeholder="Subject" 
+                onChange={handleChange}
+                />
+              <input 
+                className="text__input" 
+                type="text"
+                name="gpa"
+                placeholder="GPA" 
+                onChange={handleChange}
+                />
+              <input 
+                className="text__input" 
+                type="text"
+                name="passingYear"
+                placeholder="Passing Year" 
+                onChange={handleChange}
+                />
+              </form>
             </div>
             <div>
-              <h2>Graduation</h2>
-              <input className="text__input" placeholder="School Name" />
-              <input className="text__input" placeholder="Subject" />
-              <input className="text__input" placeholder="Passing Year" />
-              <input className="text__input" placeholder="Subject" />
-            </div>
-            <div>
+              <p>Write your objective</p>
               <TextEditor />
             </div>
           </div>
           <div className="live__priview--section">
             <div>
-              <h1>LivePreview</h1>
+              <p>LivePreview</p>
             </div>
             <div className="live__preview--comp">
-              <LivePreview input={input} />
+
+              <LiveView 
+                personalInfo={personalInfo}
+              />
+              {/* <LivePreview input={input} /> */}
             </div>
         </div>
        </div>

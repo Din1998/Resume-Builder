@@ -91,3 +91,34 @@
   padding: 8px;
   border: 1px solid #0E8388;
 }
+
+.input__textArea {
+  width: 86%;
+  height: 80px;
+  margin: 12px;
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid #0E8388;
+}
+
+.live__view {
+  height: 800px;
+  background-color: white;
+}
+.live__view .live__view--container {
+  padding: 40px;
+}
+.live__view .name_container h2 {
+  display: inline-block;
+  padding: 4px;
+}
+.live__view .address_container p {
+  display: inline-block;
+  padding: 4px;
+}
+.live__view .personal__info-container p {
+  padding: 4px;
+}
+.live__view .job_detail p {
+  display: inline-block;
+}

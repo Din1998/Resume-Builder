@@ -1,12 +1,15 @@
-import React, { useRef } from 'react';
+import React, { useRef,useState } from 'react';
 import { Editor } from '@tinymce/tinymce-react';
 
 export default function TextEditor(){
 
+  const [input,setInput] = useState('Write your Objective')
+  console.log(input)
+
   const editorRef = useRef(null);
   const log = () => {
     if (editorRef.current) {
-      console.log(editorRef.current.getContent());
+      console.log(editorRef.current.getContent({format: 'text'}));
     }
   };
 
@@ -15,8 +18,13 @@ export default function TextEditor(){
       <Editor
         apiKey='vpaahy9e4dpvzwq1ys8sqiu6s1ydlbthce76k3x449htwccg'
         cloudChannel='5-dev'
+        value={input}
         onInit={(evt, editor) => editorRef.current = editor}
-        initialValue="<p>This is the initial content of the editor.</p>"
+        onEditorChange={(newValue, editor) => {
+          setInput(newValue);
+          // setText(editor.getContent({format: 'text'}));
+        }}
+       
         init={{
           height: 500,
           menubar: false,
