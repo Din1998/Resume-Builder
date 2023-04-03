@@ -1,6 +1,13 @@
 import LivePreview from "../components/LivePreview";
+import { useState } from "react";
+import TextEditor from "../components/TextEditor";
 
 export default function() {
+  const [input,setInput] = useState("")
+  console.log(input)
+  const handleSubmit = (value) =>{
+    setInput(value)
+  }
 
   return(
     <div className="input__section">
@@ -11,7 +18,13 @@ export default function() {
           <div className="input__groups">
             <div>
               <h2>Personal Info</h2>
-              <input className="text__input" placeholder="Frist Name"/>
+              <input 
+              className="text__input"
+              placeholder="Frist Name"
+              type="text"
+              value={input}
+              onChange={(e) => handleSubmit(e.target.value)}
+              />
               <input className="text__input" placeholder="Last name"  />
               <input className="text__input" placeholder="Address" />
               <input className="text__input" placeholder="Zip Code" />
@@ -34,15 +47,17 @@ export default function() {
               <input className="text__input" placeholder="Passing Year" />
               <input className="text__input" placeholder="Subject" />
             </div>
+            <div>
+              <TextEditor />
+            </div>
           </div>
           <div className="live__priview--section">
             <div>
               <h1>LivePreview</h1>
             </div>
             <div className="live__preview--comp">
-              <LivePreview />
+              <LivePreview input={input} />
             </div>
-            
         </div>
        </div>
     </div>
