@@ -1,9 +1,41 @@
 
-import { useState } from "react";
-import TextEditor from "../components/TextEditor";
+import { useState,useEffect } from "react";
+
 import LiveView from "../components/LiveView";
+import {storage} from "../firebase";
+import {ref,uploadBytes,listAll,getDownloadURL} from "firebase/storage";
+import {v4} from "uuid"
+import {PDFDownloadLink} from "@react-pdf/renderer" 
+import PdfGenarator from "../components/PdfGenarator";
 
 export default function() {
+
+  const [imgUpload,setImgUpload] = useState(null)
+  const [imageList,setImageList] = useState([])
+  console.log(imageList)
+  const imageListRef = ref(storage,"images/")
+
+  const uploadImage = () => {
+    if (imgUpload == null) return;
+
+    const imageRef = ref(storage,`images/${imgUpload.name + v4()}`)
+    uploadBytes(imageRef,imgUpload).then((snaphsot) => {
+      getDownloadURL(snaphsot.ref).then((url) => {
+        setImageList((prev) => [...prev,url])
+      })
+      
+    });
+  }
+
+  useEffect(() => {
+    listAll(imageListRef).then((response) => {
+     response.items.forEach((item) => {
+      getDownloadURL(item).then((url) => {
+        setImageList((prev) => [...prev,url])
+      })
+     })
+    })
+  }, [])
 
 
   const [personalInfo,setInput] = useState({
@@ -156,7 +188,7 @@ export default function() {
             {/* Graduation */}
             <div>
               <p>Graduation</p>
-             <from>
+             <form>
               <input 
                 className="text__input" 
                 type="text"
@@ -186,7 +218,7 @@ export default function() {
                 onChange={handleChange}
                 />
                 
-            </from>
+            </form>
             </div>
 
             {/* <div>
@@ -198,7 +230,6 @@ export default function() {
 
             <div className="school__de">
               <p>Social links</p>
-              <form>
                 <input 
                   className="text__input" 
                   type="text"
@@ -213,30 +244,20 @@ export default function() {
                   placeholder="Socoal Links / Project Links" 
                   onChange={handleChange}
                   />
-                  <p>Add your image</p>
-                  <input 
-                  className="text__input" 
-                  type="file"
-                  name="profileImg"
-                  placeholder="Socoal Links / Project Links" 
-                  onChange={handleChange}
-                  />
-                  <button className="confirm__actn--btn">Confirm</button>
-                  </form>
             </div>
-            
-
           </div>
+
+            {/* Live view section */}
           <div className="live__priview--section">
             <div>
               <p>LivePreview</p>
             </div>
             <div className="live__preview--comp">
-
               <LiveView 
                 personalInfo={personalInfo}
+                imageList={imageList}
               />
-              {/* <LivePreview input={input} /> */}
+              <PdfGenarator  personalInfo={personalInfo} />
             </div>
         </div>
        </div>

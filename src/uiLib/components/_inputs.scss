@@ -13,12 +13,20 @@
     .input__groups{
       width: 50%;
     }
+
+    .download--btn{
+      margin-top: 40px;
+    }
     .live__priview--section{
       // .live__preview--comp{
       //   max-height: 600px;overflow-y: scroll;
       // }
      
       width: 50%;
+    }
+
+    .pdf__genaretor--section{
+      display: none;
     }
   }
 }

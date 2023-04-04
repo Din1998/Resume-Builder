@@ -1,10 +1,9 @@
-import { useState } from "react"
-
-export default function LiveView({personalInfo}) {
-
-  console.log(personalInfo)
 
 
+export default function LiveView({personalInfo,imageList}) {
+
+  const getLastImg = imageList.slice(-1)
+  console.log(getLastImg)
    
   return (
     <div className="live__view">
@@ -15,10 +14,6 @@ export default function LiveView({personalInfo}) {
               <div>
                 <h2>{personalInfo.fristName} </h2> 
                 <h2>{personalInfo.lastName}</h2>
-              </div>
-              
-              <div className="profile__img">
-               <img src={personalInfo.profileImg} />
               </div>
             </div>
             <p><i>{personalInfo.jobTitle}</i></p>
@@ -34,7 +29,7 @@ export default function LiveView({personalInfo}) {
             <p>{personalInfo.skills}</p>
           </div>
           
-          {/* img */}
+
           
         </div>
         <div className="company__info">
@@ -57,7 +52,7 @@ export default function LiveView({personalInfo}) {
         </div>
 
       </div>
-      
+
     </div>
   )
 }

@@ -79,8 +79,14 @@
 .input__section .input__page--container .input__groups {
   width: 50%;
 }
+.input__section .input__page--container .download--btn {
+  margin-top: 40px;
+}
 .input__section .input__page--container .live__priview--section {
   width: 50%;
+}
+.input__section .input__page--container .pdf__genaretor--section {
+  display: none;
 }
 
 .text__input {
@@ -114,14 +120,6 @@
 .live__view .name_container h2 {
   display: inline-block;
   padding: 4px;
-}
-.live__view .name_container .profile__img {
-  width: 180px;
-  height: 160px;
-  border: 2px solid black;
-  margin-left: 340px;
-  position: absolute;
-  z-index: 1;
 }
 .live__view .address_container p {
   display: inline-block;
