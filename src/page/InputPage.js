@@ -14,6 +14,7 @@ export default function() {
     zipCode: "",
     phone: "",
     email: "",
+    objective: "",
     companyName:"",
     jobTitle:"",
     jobResponse: "",
@@ -23,6 +24,9 @@ export default function() {
     subject:"",
     gpa: "",
     passingYear:"",
+    socialLink1: "",
+    socialLink2: "",
+    profileImg: ""
 
   })
   // console.log(input)
@@ -88,6 +92,12 @@ export default function() {
                   type="email"
                   name="email"
                   onChange={handleChange}/>
+                <textarea 
+                  className="input__textArea"
+                  placeholder="Write your objective"
+                  name="objective"
+                  onChange={handleChange}
+                 />
               </form>
              
             </div>
@@ -124,7 +134,7 @@ export default function() {
                 />
               <textarea 
                 className="input__textArea"
-                placeholder="Write you job responsiblity"
+                placeholder="Write your job responsiblity"
                 name="jobResponse"
                 onChange={handleChange}
               />
@@ -163,9 +173,39 @@ export default function() {
                 />
               </form>
             </div>
-            <div>
+            {/* <div>
               <p>Write your objective</p>
               <TextEditor />
+            </div> */}
+
+            <div>
+              <p>Social links</p>
+              <form>
+                <input 
+                  className="text__input" 
+                  type="text"
+                  name="socialLink1"
+                  placeholder="Socoal Links / Project Links" 
+                  onChange={handleChange}
+                  />
+                  <input 
+                  className="text__input" 
+                  type="text"
+                  name="socialLink2"
+                  placeholder="Socoal Links / Project Links" 
+                  onChange={handleChange}
+                  />
+                  <p>Add your image</p>
+                  <input 
+                  className="text__input" 
+                  type="file"
+                  name="profileImg"
+                  placeholder="Socoal Links / Project Links" 
+                  onChange={handleChange}
+                  />
+                  <button>Confirm</button>
+              </form>
+             
             </div>
           </div>
           <div className="live__priview--section">
