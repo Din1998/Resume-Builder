@@ -79,8 +79,14 @@
 .input__section .input__page--container .input__groups {
   width: 50%;
 }
+.input__section .input__page--container .download--btn {
+  margin-top: 40px;
+}
 .input__section .input__page--container .live__priview--section {
   width: 50%;
+}
+.input__section .input__page--container .pdf__genaretor--section {
+  display: none;
 }
 
 .text__input {
@@ -115,14 +121,6 @@
   display: inline-block;
   padding: 4px;
 }
-.live__view .name_container .profile__img {
-  width: 180px;
-  height: 160px;
-  border: 2px solid black;
-  margin-left: 340px;
-  position: absolute;
-  z-index: 1;
-}
 .live__view .address_container p {
   display: inline-block;
   padding: 4px;
@@ -144,4 +142,16 @@
 }
 .live__view .company__info {
   margin-top: 12px;
+}
+
+.confirm__actn--btn {
+  background-color: #0E8388;
+  margin-left: 40px;
+  width: 180px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
 }
