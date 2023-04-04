@@ -26,7 +26,8 @@ export default function() {
     passingYear:"",
     socialLink1: "",
     socialLink2: "",
-    profileImg: ""
+    profileImg: "",
+    skills: ""
 
   })
   // console.log(input)
@@ -43,9 +44,11 @@ export default function() {
       </div>
        <div className="input__page--container">
           <div className="input__groups">
-            <div>
+
+              {/* personal info */}
+            <div className="personal__info">
               <p>Personal Info</p>
-              <form >
+              <form>
                 <input 
                   className="text__input"
                   placeholder="Frist Name"
@@ -98,9 +101,17 @@ export default function() {
                   name="objective"
                   onChange={handleChange}
                  />
-              </form>
-             
+                 <input 
+                  className="text__input" 
+                  placeholder="Skills" 
+                  type="text"
+                  name="skills"
+                  onChange={handleChange}/>
+                   
+              </form> 
             </div>
+
+            {/* Expriance */}
             <div>
               <p>Expriance</p>
               <form>
@@ -138,11 +149,14 @@ export default function() {
                 name="jobResponse"
                 onChange={handleChange}
               />
-              </form>
+               
+            </form>
             </div>
+
+            {/* Graduation */}
             <div>
               <p>Graduation</p>
-              <form>
+             <from>
               <input 
                 className="text__input" 
                 type="text"
@@ -171,14 +185,18 @@ export default function() {
                 placeholder="Passing Year" 
                 onChange={handleChange}
                 />
-              </form>
+                
+            </from>
             </div>
+
             {/* <div>
               <p>Write your objective</p>
               <TextEditor />
             </div> */}
 
-            <div>
+            {/* sosial links */}
+
+            <div className="school__de">
               <p>Social links</p>
               <form>
                 <input 
@@ -203,10 +221,11 @@ export default function() {
                   placeholder="Socoal Links / Project Links" 
                   onChange={handleChange}
                   />
-                  <button>Confirm</button>
-              </form>
-             
+                  <button className="confirm__actn--btn">Confirm</button>
+                  </form>
             </div>
+            
+
           </div>
           <div className="live__priview--section">
             <div>

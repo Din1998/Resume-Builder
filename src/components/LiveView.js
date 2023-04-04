@@ -30,6 +30,8 @@ export default function LiveView({personalInfo}) {
             <p>Phone: {personalInfo.phone}</p>
             <p>Email: {personalInfo.email}</p>
             <p>{personalInfo.objective}</p>
+            <p><b>Skills:</b></p>
+            <p>{personalInfo.skills}</p>
           </div>
           
           {/* img */}
