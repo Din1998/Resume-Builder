@@ -245,19 +245,22 @@ export default function() {
                   onChange={handleChange}
                   />
             </div>
+            <div className="pdf__section">
+                <h2>Download your resume</h2>
+                <PdfGenarator  personalInfo={personalInfo} />
+            </div>
+              
           </div>
 
             {/* Live view section */}
           <div className="live__priview--section">
-            <div>
-              <p>LivePreview</p>
-            </div>
+
             <div className="live__preview--comp">
               <LiveView 
                 personalInfo={personalInfo}
                 imageList={imageList}
               />
-              <PdfGenarator  personalInfo={personalInfo} />
+              
             </div>
         </div>
        </div>
