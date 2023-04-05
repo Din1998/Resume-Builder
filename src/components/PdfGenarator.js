@@ -22,8 +22,8 @@ const style = StyleSheet.create({
    
   },
   viewer : {
-    width: 600,
-    height: 600,
+    width: 500,
+    height: 400,
   },
   titleFontSize: {
     fontSize: "24",
