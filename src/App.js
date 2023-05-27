@@ -1,15 +1,12 @@
 
 import './App.css';
-import Navbar from './components/Navbar';
-import Home from './page/Home';
-import InputPage from './page/InputPage';
+import Home from './page/home';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <Home />
-      <InputPage />
     </div>
   );
 }
