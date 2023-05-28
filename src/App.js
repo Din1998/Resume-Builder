@@ -1,7 +1,7 @@
 
 import './css/index.css';
 import NavBar from './components/navBar';
-
+import Hero from'./page/hero'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router,Routes,Route,Navigate} from 'react-router-dom';
 import Instruction from './page/instruction';
@@ -13,7 +13,7 @@ function App() {
       <Router>
       <NavBar />
         <Routes>
-
+          <Route path='/' element={< Hero />}/>
           <Route path='/instrution' element={< Instruction />}/>
           <Route path='/personalInfo' element={< Instruction />}/>
           <Route path='/yourExpriance' element={< Instruction />}/>
