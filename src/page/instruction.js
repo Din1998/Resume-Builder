@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPencil,faFilePdf,faDownload,faArrowRight,faFaceSmile} from '@fortawesome/free-solid-svg-icons'
 import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+
 
 export default function Instruction(){
   return(
@@ -51,7 +51,7 @@ export default function Instruction(){
         {/*  */}
         <div className='row '>
           <div className='col-12 d-flex justify-content-center flex-column align-items-center py-5'>
-          <Link className="link" to='/instrution'><button className="mt-5 actn__btn">Let’s Go</button></Link>
+          <Link className="link" to='/personalInfo'><button className="mt-5 actn__btn">Let’s Go</button></Link>
           </div>
         </div>
       </div>
