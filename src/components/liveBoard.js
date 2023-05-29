@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPencil,faFilePdf,faDownload,faArrowRight,faFaceSmile} from '@fortawesome/free-solid-svg-icons'
+
 import ModalView from './modal'
 
 

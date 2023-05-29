@@ -15,7 +15,13 @@ export default function ModalView() {
     <>
     
       <FontAwesomeIcon icon={faPencil} className='icon ' onClick={handleShow}></FontAwesomeIcon>
-      <Modal show={show} onHide={handleClose}>
+      <Modal 
+        show={show} 
+        onHide={handleClose}  
+        size="md"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
         <Modal.Header closeButton>
           <Modal.Title>Edit Your Data</Modal.Title>
         </Modal.Header>
