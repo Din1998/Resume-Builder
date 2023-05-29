@@ -103,13 +103,35 @@ export default function Expriance({addExpriance}){
                 />
               </div>
             </div>
+            {/*  */}
+            
+            <div class="row mb-3">
+              <div className="col-6">
+              <div class="form-check py-3">
+                <input
+                  name="Chacke" 
+                  class="form-check-input" 
+                  type="checkbox" 
+                  value="Continue" 
+                  id="flexCheckDefault" 
+                  onChange={handleChange}
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Continue
+                </label>
+              </div>
+              </div>
+              <div className="col-6">
+               
+              </div>
+            </div>
         </form>
         <div class="row mb-3">
               <div className="col-6">
               <Link className="link" to='/personalInfo'><button className="mt-5 actn__btn">Back</button></Link>
               </div>
               <div className="col-6">
-              <Link className="link" to='/yourExpriance'><button className="mt-5 actn__btn">Next</button></Link>
+              <Link className="link" to='/yourEducation'><button className="mt-5 actn__btn">Next</button></Link>
               </div>
           </div>
         </div>
