@@ -82,10 +82,10 @@ export default function PersonalInfo({addinfo,info}){
 
               <div class="row mb-3">
                 <div className="col-6">
-                  <label for="exampleInputEmail1" class="form-label">Phone</label>
+                  <label for="exampleInputEmail1" class="form-label">Email</label>
                   <input 
-                    name="Phone"
-                    type="text" 
+                    name="Email"
+                    type="email" 
                     required={true} 
                     className="form-control" 
                     id="exampleInputEmail1" 
@@ -94,10 +94,10 @@ export default function PersonalInfo({addinfo,info}){
                   />
                 </div>
                 <div className="col-6">
-                  <label for="exampleInputEmail1" class="form-label">Email</label>
+                  <label for="exampleInputEmail1" class="form-label">Phone</label>
                   <input 
-                    name="Email"
-                    type="email" 
+                    name="Phone"
+                    type="number" 
                     required={true} 
                     className="form-control" 
                     id="exampleInputEmail1" 

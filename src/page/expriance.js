@@ -1,7 +1,7 @@
 import LiveBoard from "../components/liveBoard";
 import { Link } from "react-router-dom";
 
-export default function Expriance({addExpriance}){
+export default function Expriance({addExpriance,info}){
 
   const handleChange = (e) => {
     addExpriance((prev) => ({...prev,[e.target.name]:e.target.value}))
@@ -137,7 +137,7 @@ export default function Expriance({addExpriance}){
         </div>
       </div>
       <div className="col-md-6 live__section">
-        <LiveBoard />
+        <LiveBoard personalInfo={info}/>
       </div>
     </div>
   </div>
