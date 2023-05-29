@@ -25,8 +25,8 @@ export default function Expriance({addExpriance}){
                   name="CompanyName"
                   ype="text" 
                   required="true" 
-                  class="form-control" 
-                  id="exampleInputEmail1" 
+                  className="form-control" 
+                  
                   aria-describedby="emailHelp" 
                   onChange={handleChange}
               
@@ -38,8 +38,8 @@ export default function Expriance({addExpriance}){
                   name="JobTitle"
                   type="text" 
                   required="true" 
-                  class="form-control" 
-                  id="exampleInputEmail1" 
+                  className="form-control" 
+                 
                   aria-describedby="emailHelp" 
                   onChange={handleChange}
                 />
@@ -55,8 +55,8 @@ export default function Expriance({addExpriance}){
                   name="City"
                   type="text" 
                   required="true" 
-                  class="form-control" 
-                  id="exampleInputEmail1" 
+                  className="form-control" 
+                  
                   aria-describedby="emailHelp" 
                   onChange={handleChange}
                 />
@@ -67,8 +67,8 @@ export default function Expriance({addExpriance}){
                   name="Country"
                   type="text" 
                   required="true" 
-                  class="form-control" 
-                  id="exampleInputEmail1" 
+                  className="form-control" 
+                  
                   aria-describedby="emailHelp" 
                   onChange={handleChange}
                 />
@@ -84,8 +84,8 @@ export default function Expriance({addExpriance}){
                   name="StartDate"
                   type="date" 
                   required="true" 
-                  class="form-control" 
-                  id="exampleInputEmail1" 
+                  className="form-control" 
+                  
                   aria-describedby="emailHelp" 
                   onChange={handleChange}
                 />
@@ -96,8 +96,8 @@ export default function Expriance({addExpriance}){
                   name="EndDate"
                   type="date" 
                   required="true" 
-                  class="form-control" 
-                  id="exampleInputEmail1" 
+                  className="form-control" 
+                  
                   aria-describedby="emailHelp" 
                   onChange={handleChange}
                 />
@@ -110,10 +110,10 @@ export default function Expriance({addExpriance}){
               <div class="form-check py-3">
                 <input
                   name="Chacker" 
-                  class="form-check-input" 
+                  className="form-check-input" 
                   type="checkbox" 
                   value="Continue" 
-                  id="flexCheckDefault" 
+                 
                   onChange={handleChange}
                 />
                 <label class="form-check-label" for="flexCheckDefault">

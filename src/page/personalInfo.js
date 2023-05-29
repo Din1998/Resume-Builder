@@ -2,7 +2,9 @@ import LiveBoard from "../components/liveBoard";
 import { Link } from "react-router-dom";
 
 
-export default function PersonalInfo({addinfo}){
+export default function PersonalInfo({addinfo,info}){
+
+  console.log(info)
 
   const handleChange = (e) => {
     addinfo((prev) => ({...prev,[e.target.name]:e.target.value}))
@@ -25,8 +27,8 @@ export default function PersonalInfo({addinfo}){
                   <input 
                     name="FirstName"
                     ype="email" 
-                    required="true" 
-                    class="form-control" 
+                    required={true} 
+                    className="form-control" 
                     id="exampleInputEmail1" 
                     aria-describedby="emailHelp" 
                     onChange={handleChange}
@@ -38,8 +40,8 @@ export default function PersonalInfo({addinfo}){
                   <input 
                     name="LastName"
                     type="email" 
-                    required="true" 
-                    class="form-control" 
+                    required={true} 
+                    className="form-control" 
                     id="exampleInputEmail1" 
                     aria-describedby="emailHelp" 
                     onChange={handleChange}
@@ -54,9 +56,9 @@ export default function PersonalInfo({addinfo}){
                   <label for="exampleInputEmail1" class="form-label">Addresss</label>
                   <input 
                     name="Addresss"
-                    type="email" 
-                    required="true" 
-                    class="form-control" 
+                    type="text" 
+                    required={true} 
+                    className="form-control" 
                     id="exampleInputEmail1" 
                     aria-describedby="emailHelp" 
                     onChange={handleChange}
@@ -66,9 +68,9 @@ export default function PersonalInfo({addinfo}){
                   <label for="exampleInputEmail1" class="form-label">Zip code</label>
                   <input 
                     name="ZipCode"
-                    type="email" 
-                    required="true" 
-                    class="form-control" 
+                    type="text" 
+                    required={true} 
+                    className="form-control" 
                     id="exampleInputEmail1" 
                     aria-describedby="emailHelp" 
                     onChange={handleChange}
@@ -83,9 +85,9 @@ export default function PersonalInfo({addinfo}){
                   <label for="exampleInputEmail1" class="form-label">Phone</label>
                   <input 
                     name="Phone"
-                    type="email" 
-                    required="true" 
-                    class="form-control" 
+                    type="text" 
+                    required={true} 
+                    className="form-control" 
                     id="exampleInputEmail1" 
                     aria-describedby="emailHelp" 
                     onChange={handleChange}
@@ -96,8 +98,8 @@ export default function PersonalInfo({addinfo}){
                   <input 
                     name="Email"
                     type="email" 
-                    required="true" 
-                    class="form-control" 
+                    required={true} 
+                    className="form-control" 
                     id="exampleInputEmail1" 
                     aria-describedby="emailHelp" 
                     onChange={handleChange}
@@ -116,7 +118,7 @@ export default function PersonalInfo({addinfo}){
           </div>
         </div>
         <div className="col-md-6 live__section">
-          <LiveBoard />
+          <LiveBoard personalInfo={info} />
         </div>
       </div>
     </div>
