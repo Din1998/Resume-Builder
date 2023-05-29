@@ -21,23 +21,23 @@ function App() {
   })
 
   const [expriance,addExpriance] = useState({
-    FirstName: "",
-    LastName: "",
-    Addresss: "",
-    ZipCode: "",
-    Phone:"",
-    Email:"",
-    Chacke:"",
+    CompanyName: "",
+    JobTitle: "",
+    City: "",
+    Country: "",
+    StartDate:"",
+    EndDate:"",
+    Chacker:"",
   })
 
   const [education,addEducation] = useState({
-    FirstName: "",
-    LastName: "",
-    Addresss: "",
-    ZipCode: "",
-    Phone:"",
-    Email:"",
-    Chacke:"",
+    SchoolName: "",
+    SchoolLocation: "",
+    Subject: "",
+    Result: "",
+    StartDate:"",
+    EndDate:"",
+    Chacker:"",
   })
 
   console.log(info)

@@ -18,7 +18,7 @@ export default function PersonalInfo({addinfo}){
             <p>Please fill out .</p>
           </div>
           <div>
-          <form>
+          <form className="py-2">
               <div class="row mb-3">
                 <div className="col-6">
                   <label for="exampleInputEmail1" class="form-label">First Name</label>
