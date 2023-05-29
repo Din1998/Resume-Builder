@@ -3,8 +3,10 @@ import './css/index.css';
 import NavBar from './components/navBar';
 import Hero from'./page/hero'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {BrowserRouter as Router,Routes,Route,Navigate} from 'react-router-dom';
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import Instruction from './page/instruction';
+import PersonalInfo from './page/personalInfo';
+import Expriance from './page/expriance';
 
 function App() {
   return (
@@ -15,8 +17,8 @@ function App() {
         <Routes>
           <Route path='/' element={< Hero />}/>
           <Route path='/instrution' element={< Instruction />}/>
-          <Route path='/personalInfo' element={< Instruction />}/>
-          <Route path='/yourExpriance' element={< Instruction />}/>
+          <Route path='/personalInfo' element={< PersonalInfo />}/>
+          <Route path='/yourExpriance' element={< Expriance />}/>
           <Route path='/yourEducation' element={< Instruction />}/>
           <Route path='/yourSkill' element={< Instruction />}/>
           <Route path='/yourSummary' element={< Instruction />}/>

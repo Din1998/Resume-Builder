@@ -1,5 +1,5 @@
 .home{
-  height: 400px;
+
  .hero__text{
   font-size: 60px;
  }
@@ -10,4 +10,9 @@
   border: none;
   border-radius: 0px 50px;
  }
+}
+
+.App{
+  height: 100vh;
+  font-family: $--fontStyle;
 }
