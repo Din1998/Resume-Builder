@@ -13,16 +13,16 @@ export default function Education({addEducation}){
     <div className="row">
       <div className="col-md-6">
         <div>
-          <h1>Add your expriance.</h1>
+          <h1>Add your education.</h1>
           <p>Please fill out .</p>
         </div>
         <div>
-        <form>
+        <form className="py-2">
             <div class="row mb-3">
               <div className="col-6">
                 <label for="exampleInputEmail1" class="form-label">School Name</label>
                 <input 
-                  name="FirstName"
+                  name="SchoolName"
                   ype="email" 
                   required="true" 
                   class="form-control" 
@@ -33,9 +33,9 @@ export default function Education({addEducation}){
                 />
               </div>
               <div className="col-6">
-                <label for="exampleInputEmail1" class="form-label">School location</label>
+                <label for="exampleInputEmail1" class="form-label">School Location</label>
                 <input 
-                  name="LastName"
+                  name="SchoolLocation"
                   type="email" 
                   required="true" 
                   class="form-control" 
@@ -52,7 +52,7 @@ export default function Education({addEducation}){
               <div className="col-6">
                 <label for="exampleInputEmail1" class="form-label">Subject</label>
                 <input 
-                  name="Addresss"
+                  name="Subject"
                   type="email" 
                   required="true" 
                   class="form-control" 
@@ -64,7 +64,7 @@ export default function Education({addEducation}){
               <div className="col-6">
                 <label for="exampleInputEmail1" class="form-label">Result</label>
                 <input 
-                  name="ZipCode"
+                  name="Result"
                   type="email" 
                   required="true" 
                   class="form-control" 
@@ -81,7 +81,7 @@ export default function Education({addEducation}){
               <div className="col-6">
                 <label for="exampleInputEmail1" class="form-label">Start Date</label>
                 <input 
-                  name="Phone"
+                  name="StartDate"
                   type="date" 
                   required="true" 
                   class="form-control" 
@@ -93,7 +93,7 @@ export default function Education({addEducation}){
               <div className="col-6">
                 <label for="exampleInputEmail1" class="form-label">End Date</label>
                 <input 
-                  name="Email"
+                  name="EndDate"
                   type="date" 
                   required="true" 
                   class="form-control" 
@@ -109,7 +109,7 @@ export default function Education({addEducation}){
               <div className="col-6">
               <div class="form-check py-3">
                 <input
-                  name="Chacke" 
+                  name="Chacker" 
                   class="form-check-input" 
                   type="checkbox" 
                   value="Continue" 

@@ -17,13 +17,13 @@ export default function Expriance({addExpriance}){
           <p>Please fill out .</p>
         </div>
         <div>
-        <form>
+        <form className="py-2">
             <div class="row mb-3">
               <div className="col-6">
                 <label for="exampleInputEmail1" class="form-label">Company name</label>
                 <input 
-                  name="FirstName"
-                  ype="email" 
+                  name="CompanyName"
+                  ype="text" 
                   required="true" 
                   class="form-control" 
                   id="exampleInputEmail1" 
@@ -35,8 +35,8 @@ export default function Expriance({addExpriance}){
               <div className="col-6">
                 <label for="exampleInputEmail1" class="form-label">Job title</label>
                 <input 
-                  name="LastName"
-                  type="email" 
+                  name="JobTitle"
+                  type="text" 
                   required="true" 
                   class="form-control" 
                   id="exampleInputEmail1" 
@@ -52,8 +52,8 @@ export default function Expriance({addExpriance}){
               <div className="col-6">
                 <label for="exampleInputEmail1" class="form-label">City</label>
                 <input 
-                  name="Addresss"
-                  type="email" 
+                  name="City"
+                  type="text" 
                   required="true" 
                   class="form-control" 
                   id="exampleInputEmail1" 
@@ -64,8 +64,8 @@ export default function Expriance({addExpriance}){
               <div className="col-6">
                 <label for="exampleInputEmail1" class="form-label">Country</label>
                 <input 
-                  name="ZipCode"
-                  type="email" 
+                  name="Country"
+                  type="text" 
                   required="true" 
                   class="form-control" 
                   id="exampleInputEmail1" 
@@ -81,7 +81,7 @@ export default function Expriance({addExpriance}){
               <div className="col-6">
                 <label for="exampleInputEmail1" class="form-label">Start Date</label>
                 <input 
-                  name="Phone"
+                  name="StartDate"
                   type="date" 
                   required="true" 
                   class="form-control" 
@@ -93,7 +93,7 @@ export default function Expriance({addExpriance}){
               <div className="col-6">
                 <label for="exampleInputEmail1" class="form-label">End Date</label>
                 <input 
-                  name="Email"
+                  name="EndDate"
                   type="date" 
                   required="true" 
                   class="form-control" 
@@ -104,12 +104,12 @@ export default function Expriance({addExpriance}){
               </div>
             </div>
             {/*  */}
-            
+
             <div class="row mb-3">
               <div className="col-6">
               <div class="form-check py-3">
                 <input
-                  name="Chacke" 
+                  name="Chacker" 
                   class="form-check-input" 
                   type="checkbox" 
                   value="Continue" 

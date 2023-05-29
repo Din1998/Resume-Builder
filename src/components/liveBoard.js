@@ -1,9 +1,21 @@
 
+import ModalView from './modal'
+
 
 export default function LiveBoard(){
   return(
     <div className="liveBoard__component">
-      <h1>Live Preview</h1>
+      <div className='row'>
+        <div className='col'>
+        <h1>Live Preview</h1>
+        </div>
+        <div className='col'>
+        
+        <ModalView />
+        </div>
+       
+      </div>
+      
         <div className="live__board">
 
         </div>
