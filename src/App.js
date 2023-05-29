@@ -8,6 +8,7 @@ import Instruction from './page/instruction';
 import PersonalInfo from './page/personalInfo';
 import Expriance from './page/expriance';
 import Education from "./page/education";
+import Skill from "./page/skills";
 
 function App() {
 
@@ -55,7 +56,7 @@ function App() {
           <Route path='/personalInfo' element={< PersonalInfo addinfo={addInfo} />}/>
           <Route path='/yourExpriance' element={< Expriance addExpriance={addExpriance}/>}/>
           <Route path='/yourEducation' element={< Education addEducation={addEducation}/>}/>
-          <Route path='/yourSkill' element={< Instruction />}/>
+          <Route path='/yourSkill' element={< Skill />}/>
           <Route path='/yourSummary' element={< Instruction />}/>
           <Route path='/download' element={< Instruction />}/>
         </Routes>
