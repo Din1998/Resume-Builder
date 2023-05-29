@@ -1,25 +1,13 @@
 import LiveBoard from "../components/liveBoard";
-import { useState } from "react"
 import { Link } from "react-router-dom";
 
 
-export default function PersonalInfo(){
-
-
-  const [blog,addBlog] = useState({
-    FirstName: "",
-    LastName: "",
-    Addresss: "",
-    ZipCode: "",
-    Phone:"",
-    Email:"",
-  })
+export default function PersonalInfo({addinfo}){
 
   const handleChange = (e) => {
-    addBlog((prev) => ({...prev,[e.target.name]:e.target.value}))
+    addinfo((prev) => ({...prev,[e.target.name]:e.target.value}))
   }
 
-  console.log(blog)
 
   return(
     <div className="container-md py-5">
@@ -42,6 +30,7 @@ export default function PersonalInfo(){
                     id="exampleInputEmail1" 
                     aria-describedby="emailHelp" 
                     onChange={handleChange}
+                
                   />
                 </div>
                 <div className="col-6">
