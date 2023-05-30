@@ -1,10 +1,36 @@
 import LiveBoard from "../components/liveBoard";
 import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlusCircle} from '@fortawesome/free-solid-svg-icons'
 
-export default function Expriance({addExpriance,info}){
 
-  const handleChange = (e) => {
-    addExpriance((prev) => ({...prev,[e.target.name]:e.target.value}))
+export default function Expriance({info,Input,setInput,expriance,AddExpriance }){
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  console.log(Input)
+  console.log(info)
+  console.log(expriance)
+  
+  const onInputChange = (e) => {
+
+    setInput((prev) => ({...prev,[e.target.name]:e.target.value}))
+  }
+
+  // const onInputChange = (event) => {
+  //   setInput(event.target.value)
+  // }
+
+  const onFormSubmit = (event) => {
+    event.preventDefault();
+    AddExpriance([...expriance,Input
+    
+    ]);
+    setInput("")
   }
 
 
@@ -17,23 +43,23 @@ export default function Expriance({addExpriance,info}){
           <p>Please fill out .</p>
         </div>
         <div>
-        <form className="py-2">
-            <div class="row mb-3">
+        <form className="py-2" onSubmit={onFormSubmit}>
+            <div className="row mb-3">
               <div className="col-6">
-                <label for="exampleInputEmail1" class="form-label">Company name</label>
+                <label for="exampleInputEmail1" className="form-label">Company name</label>
                 <input 
                   name="CompanyName"
-                  ype="text" 
+                  type="text" 
                   required="true" 
                   className="form-control" 
-                  
+        
                   aria-describedby="emailHelp" 
-                  onChange={handleChange}
+                  onChange={onInputChange}
               
                 />
               </div>
               <div className="col-6">
-                <label for="exampleInputEmail1" class="form-label">Job title</label>
+                <label  className="form-label">Job title</label>
                 <input 
                   name="JobTitle"
                   type="text" 
@@ -41,16 +67,16 @@ export default function Expriance({addExpriance,info}){
                   className="form-control" 
                  
                   aria-describedby="emailHelp" 
-                  onChange={handleChange}
+                  onChange={onInputChange}
                 />
               </div>
             </div>
 
             {/*  */}
 
-            <div class="row mb-3">
+            <div className="row mb-3">
               <div className="col-6">
-                <label for="exampleInputEmail1" class="form-label">City</label>
+                <label  className="form-label">City</label>
                 <input 
                   name="City"
                   type="text" 
@@ -58,11 +84,11 @@ export default function Expriance({addExpriance,info}){
                   className="form-control" 
                   
                   aria-describedby="emailHelp" 
-                  onChange={handleChange}
+                  onChange={onInputChange}
                 />
               </div>
               <div className="col-6">
-                <label for="exampleInputEmail1" class="form-label">Country</label>
+                <label  className="form-label">Country</label>
                 <input 
                   name="Country"
                   type="text" 
@@ -70,16 +96,16 @@ export default function Expriance({addExpriance,info}){
                   className="form-control" 
                   
                   aria-describedby="emailHelp" 
-                  onChange={handleChange}
+                  onChange={onInputChange}
                 />
               </div>
             </div>
 
             {/*  */}
 
-            <div class="row mb-3">
+            <div className="row mb-3">
               <div className="col-6">
-                <label for="exampleInputEmail1" class="form-label">Start Date</label>
+                <label className="form-label">Start Date</label>
                 <input 
                   name="StartDate"
                   type="date" 
@@ -87,19 +113,19 @@ export default function Expriance({addExpriance,info}){
                   className="form-control" 
                   
                   aria-describedby="emailHelp" 
-                  onChange={handleChange}
+                  onChange={onInputChange}
                 />
               </div>
               <div className="col-6">
-                <label for="exampleInputEmail1" class="form-label">End Date</label>
+                <label  className="form-label">End Date</label>
                 <input 
                   name="EndDate"
                   type="date" 
-                  required="true" 
+                  
                   className="form-control" 
                   
                   aria-describedby="emailHelp" 
-                  onChange={handleChange}
+                  onChange={onInputChange}
                 />
               </div>
             </div>
@@ -107,26 +133,160 @@ export default function Expriance({addExpriance,info}){
 
             <div class="row mb-3">
               <div className="col-6">
-              <div class="form-check py-3">
-                <input
-                  name="Chacker" 
-                  className="form-check-input" 
-                  type="checkbox" 
-                  value="Continue" 
-                 
-                  onChange={handleChange}
-                />
-                <label class="form-check-label" for="flexCheckDefault">
-                  Continue
-                </label>
-              </div>
+                <div className="form-check py-3">
+                  <input
+                    name="Chacker" 
+                    className="form-check-input" 
+                    type="checkbox" 
+                    value="Continue"
+                  
+                    onChange={onInputChange}
+                  />
+                  <label className="form-check-label" for="flexCheckDefault">
+                    Continue
+                  </label>
+                </div>
+                {/* ----Modal--- */}
+                <div className="pt-4">
+                  <div className="add__more">
+                    <FontAwesomeIcon icon={faPlusCircle} className='add__icon' onClick={handleShow} />
+                    <p>Add More</p>
+                  </div>
+                  
+                  <Modal 
+                    show={show} 
+                    onHide={handleClose}  
+                    size="md"
+                    aria-labelledby="contained-modal-title-vcenter"
+                    centered
+                  >
+                    <Modal.Header closeButton>
+                      <Modal.Title>Add More Expriance.</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <form className="py-2" onSubmit={onFormSubmit}>
+                          <div class="row mb-3">
+                            <div className="col-6">
+                              <label  className="form-label">Company name</label>
+                              <input 
+                                name="CompanyName"
+                                type="text" 
+                                required="true" 
+                                className="form-control" 
+                      
+                                aria-describedby="emailHelp" 
+                                onChange={onInputChange}
+                            
+                              />
+                            </div>
+                            <div className="col-6">
+                              <label  className="form-label">Job title</label>
+                              <input 
+                                name="JobTitle"
+                                type="text" 
+                                required="true" 
+                                className="form-control" 
+                              
+                                aria-describedby="emailHelp" 
+                                onChange={onInputChange}
+                              />
+                            </div>
+                          </div>
+
+                          {/*  */}
+
+                          <div classNam="row mb-3">
+                            <div className="col-6">
+                              <label  className="form-label">City</label>
+                              <input 
+                                name="City"
+                                type="text" 
+                                required="true" 
+                                className="form-control" 
+                                
+                                aria-describedby="emailHelp" 
+                                onChange={onInputChange}
+                              />
+                            </div>
+                            <div className="col-6">
+                              <label  className="form-label">Country</label>
+                              <input 
+                                name="Country"
+                                type="text" 
+                                required="true" 
+                                className="form-control" 
+                                
+                                aria-describedby="emailHelp" 
+                                onChange={onInputChange}
+                              />
+                            </div>
+                          </div>
+
+                          {/*  */}
+
+                          <div className="row mb-3">
+                            <div className="col-6">
+                              <label  className="form-label">Start Date</label>
+                              <input 
+                                name="StartDate"
+                                type="date" 
+                                required="true" 
+                                className="form-control" 
+                                
+                                aria-describedby="emailHelp" 
+                                onChange={onInputChange}
+                              />
+                            </div>
+                            <div className="col-6">
+                              <label  className="form-label">End Date</label>
+                              <input 
+                                name="EndDate"
+                                type="date" 
+                                
+                                className="form-control" 
+                                
+                                aria-describedby="emailHelp" 
+                                onChange={onInputChange}
+                              />
+                            </div>
+                          </div>
+                          {/*  */}
+
+                          <div className="row mb-3">
+                            <div className="col-6">
+                              <div className="form-check py-3">
+                                <input
+                                  name="Chacker" 
+                                  className="form-check-input" 
+                                  type="checkbox" 
+                                  value="Continue"
+                                
+                                  onChange={onInputChange}
+                                />
+                                <label className="form-check-label" for="flexCheckDefault">
+                                  Continue
+                                </label>
+                              </div>
+                              <div className="col-6">
+                            <button className="mt-3 actn__btn" onClick={handleClose}>Add</button>
+                            </div>
+                          </div>
+                          </div>
+                      </form>
+                    </Modal.Body>
+                    
+                  </Modal>
+
+
+                </div>
+                {/*  */}
               </div>
               <div className="col-6">
-               
+              <button className="mt-3 actn__btn">Add</button>
               </div>
             </div>
         </form>
-        <div class="row mb-3">
+        <div className="row mb-3">
               <div className="col-6">
               <Link className="link" to='/personalInfo'><button className="mt-5 actn__btn">Back</button></Link>
               </div>
