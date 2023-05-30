@@ -9,6 +9,8 @@ import PersonalInfo from './page/personalInfo';
 import Expriance from './page/expriance';
 import Education from "./page/education";
 import Skill from "./page/skills";
+import Summary from "./page/summary";
+import Download from "./page/download";
 
 function App() {
 
@@ -17,8 +19,8 @@ function App() {
     LastName: "",
     Addresss: "",
     ZipCode: "",
-    Phone:"",
     Email:"",
+    Phone:""
   })
 
   const [expriance,addExpriance] = useState({
@@ -41,9 +43,21 @@ function App() {
     Chacker:"",
   })
 
+  const [summary,addSummary] = useState({
+    Summary: "",
+    
+  })
+
+
+  const [input,setInput] = useState("");
+  const [skills,setSkills] = useState([]);
+
+
   console.log(info)
   console.log(expriance)
   console.log(education)
+  console.log(skills)
+  console.log(summary)
 
   return (
     <div className="App">
@@ -53,12 +67,12 @@ function App() {
         <Routes>
           <Route path='/' element={< Hero />}/>
           <Route path='/instrution' element={< Instruction />}/>
-          <Route path='/personalInfo' element={< PersonalInfo addinfo={addInfo} />}/>
+          <Route path='/personalInfo' element={< PersonalInfo info={info} addinfo={addInfo} />}/>
           <Route path='/yourExpriance' element={< Expriance addExpriance={addExpriance}/>}/>
           <Route path='/yourEducation' element={< Education addEducation={addEducation}/>}/>
-          <Route path='/yourSkill' element={< Skill />}/>
-          <Route path='/yourSummary' element={< Instruction />}/>
-          <Route path='/download' element={< Instruction />}/>
+          <Route path='/yourSkill' element={< Skill input={input} setInput={setInput} skills={skills} setSkills={setSkills}/>}/>
+          <Route path='/yourSummary' element={< Summary addSummary={addSummary}/>}/>
+          <Route path='/download' element={< Download />}/>
         </Routes>
       </Router>
     </div>

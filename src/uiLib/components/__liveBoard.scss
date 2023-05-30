@@ -1,9 +1,110 @@
 
 
-
   .live__board{
+    margin-left: 0px !important;
     height: 70vh;
-    background-color: aliceblue;
-    border: 1px solid black;
+    width: 80% !important;
+    background-color: whitesmoke;
+    overflow-x: hidden; 
+    overflow-y: scroll; 
     border-radius: 4px;
+    box-shadow: -3px 4px 8px -3px rgba(0,0,0,1);
+    -webkit-box-shadow: -3px 4px 8px -3px rgba(0,0,0,1);
+    -moz-box-shadow: -3px 4px 8px -3px rgba(0,0,0,1);
   }
+.personal__info{
+  margin-left: 0px !important;
+  width: 100%;
+  line-height: 10px;
+  border-bottom: 1px solid rgb(150, 150, 150);
+  p{
+    font-size: 14px;
+  }
+  h1{
+    font-size: 14px;
+    font-weight: 800;
+  }
+  .live__board__icon{
+    padding-right: 6px;
+    height: 12px;
+    width: 12px;
+  }
+  .email{
+    display: inline-flex;
+  }
+  .phone{
+    display: inline-flex;
+  }
+  .name{
+    display: inline-flex;
+    h1{
+      padding-right: 6px;
+    }
+  }
+}
+
+.address{
+  display: inline-flex;
+  p{
+    padding-right: 8px;
+  }
+}
+
+.summary{
+  margin-left: 0px !important;
+  h1{
+    font-size: 14px;
+    font-weight: 800;
+  }
+  p{
+    font-size: 14px;
+  }
+  border-bottom: 1px solid rgb(150, 150, 150);
+}
+
+.expriance{
+  margin-left: 0px !important;
+  line-height: 8px;
+  h1{
+    font-size: 14px;
+    font-weight: 800;
+  }
+  p{
+    font-size: 14px;
+  }
+  .company{
+    line-height: 4px;
+  }
+  border-bottom: 1px solid rgb(150, 150, 150);
+}
+
+.education{
+  margin-left: 0px !important;
+  line-height: 8px;
+  h1{
+    font-size: 14px;
+    font-weight: 800;
+  }
+  p{
+    font-size: 14px;
+  }
+  .school{
+    line-height: 4px;
+  }
+  .school_info{
+    p{
+      padding-right: 8px;
+    }
+    
+    display: inline-flex;
+  }
+  border-bottom: 1px solid rgb(150, 150, 150);
+}
+
+.skill_info{
+  margin-left: 0px !important;
+  display: inline-flex;
+  p{
+    padding-right: 8px;
+  }
+}

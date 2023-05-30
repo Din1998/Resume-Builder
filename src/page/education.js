@@ -23,10 +23,10 @@ export default function Education({addEducation}){
                 <label for="exampleInputEmail1" class="form-label">School Name</label>
                 <input 
                   name="SchoolName"
-                  ype="email" 
+                  type="text" 
                   required="true" 
-                  class="form-control" 
-                  id="exampleInputEmail1" 
+                  className="form-control" 
+               
                   aria-describedby="emailHelp" 
                   onChange={handleChange}
               
@@ -36,10 +36,10 @@ export default function Education({addEducation}){
                 <label for="exampleInputEmail1" class="form-label">School Location</label>
                 <input 
                   name="SchoolLocation"
-                  type="email" 
+                  type="text" 
                   required="true" 
-                  class="form-control" 
-                  id="exampleInputEmail1" 
+                  className="form-control" 
+                 
                   aria-describedby="emailHelp" 
                   onChange={handleChange}
                 />
@@ -53,10 +53,10 @@ export default function Education({addEducation}){
                 <label for="exampleInputEmail1" class="form-label">Subject</label>
                 <input 
                   name="Subject"
-                  type="email" 
+                  type="text" 
                   required="true" 
-                  class="form-control" 
-                  id="exampleInputEmail1" 
+                  className="form-control" 
+                  
                   aria-describedby="emailHelp" 
                   onChange={handleChange}
                 />
@@ -65,10 +65,10 @@ export default function Education({addEducation}){
                 <label for="exampleInputEmail1" class="form-label">Result</label>
                 <input 
                   name="Result"
-                  type="email" 
+                  type="text" 
                   required="true" 
-                  class="form-control" 
-                  id="exampleInputEmail1" 
+                  className="form-control" 
+                  
                   aria-describedby="emailHelp" 
                   onChange={handleChange}
                 />
@@ -84,8 +84,8 @@ export default function Education({addEducation}){
                   name="StartDate"
                   type="date" 
                   required="true" 
-                  class="form-control" 
-                  id="exampleInputEmail1" 
+                  className="form-control" 
+                  
                   aria-describedby="emailHelp" 
                   onChange={handleChange}
                 />
@@ -96,8 +96,8 @@ export default function Education({addEducation}){
                   name="EndDate"
                   type="date" 
                   required="true" 
-                  class="form-control" 
-                  id="exampleInputEmail1" 
+                  className="form-control" 
+                  
                   aria-describedby="emailHelp" 
                   onChange={handleChange}
                 />
@@ -110,10 +110,10 @@ export default function Education({addEducation}){
               <div class="form-check py-3">
                 <input
                   name="Chacker" 
-                  class="form-check-input" 
+                  className="form-check-input" 
                   type="checkbox" 
                   value="Continue" 
-                  id="flexCheckDefault" 
+                  
                   onChange={handleChange}
                 />
                 <label class="form-check-label" for="flexCheckDefault">
