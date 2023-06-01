@@ -2,7 +2,7 @@ import LiveBoard from "../components/liveBoard";
 import { Link } from "react-router-dom";
 
 
-export default function Summary({addSummary}){
+export default function Summary({addSummary,info}){
 
 
   const handleChange = (e) => {
@@ -64,7 +64,7 @@ export default function Summary({addSummary}){
         </div>
       </div>
       <div className="col-md-6 live__section">
-        <LiveBoard />
+        <LiveBoard personalInfo={info}/>
       </div>
     </div>
   </div>

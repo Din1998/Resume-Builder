@@ -158,3 +158,15 @@
 .skill_info p {
   padding-right: 8px;
 }
+
+.add__more {
+  display: inline-flex;
+}
+.add__more .add__icon {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+.add__more p {
+  padding-left: 12px;
+}

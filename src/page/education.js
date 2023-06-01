@@ -1,7 +1,7 @@
 import LiveBoard from "../components/liveBoard";
 import { Link } from "react-router-dom";
 
-export default function Education({addEducation}){
+export default function Education({addEducation,info}){
 
 
   const handleChange = (e) => {
@@ -138,7 +138,7 @@ export default function Education({addEducation}){
         </div>
       </div>
       <div className="col-md-6 live__section">
-        <LiveBoard />
+        <LiveBoard personalInfo={info}/>
       </div>
     </div>
   </div>

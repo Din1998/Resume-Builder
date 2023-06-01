@@ -3,7 +3,7 @@ import { faPencil,faFilePdf,faDownload,faArrowRight,faFaceSmile} from '@fortawes
 import { Link } from "react-router-dom";
 
 
-export default function Instruction(){
+export default function Instruction({info}){
   return(
     <div className="container-md">
       <div className="row">

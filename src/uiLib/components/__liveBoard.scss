@@ -108,3 +108,17 @@
     padding-right: 8px;
   }
 }
+
+
+.add__more{
+  
+  .add__icon{
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+  }
+  display: inline-flex;
+  p{
+    padding-left: 12px;
+  }
+}
