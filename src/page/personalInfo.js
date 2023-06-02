@@ -2,7 +2,7 @@ import LiveBoard from "../components/liveBoard";
 import { Link } from "react-router-dom";
 
 
-export default function PersonalInfo({addinfo,info}){
+export default function PersonalInfo({addinfo,info,expriance}){
 
   console.log(info)
 
@@ -118,7 +118,7 @@ export default function PersonalInfo({addinfo,info}){
           </div>
         </div>
         <div className="col-md-6 live__section">
-          <LiveBoard personalInfo={info} />
+          <LiveBoard personalInfo={info} expriance={expriance}/>
         </div>
       </div>
     </div>

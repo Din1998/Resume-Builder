@@ -14,6 +14,7 @@ import Download from "./page/download";
 
 function App() {
 
+  // 
   const [info,addInfo] = useState({
     FirstName: "",
     LastName: "",
@@ -33,6 +34,7 @@ function App() {
   //   Chacker:"",
   // })
 
+  // 
   const [education,addEducation] = useState({
     SchoolName: "",
     SchoolLocation: "",
@@ -42,17 +44,18 @@ function App() {
     EndDate:"",
     Chacker:"",
   })
-
+// 
   const [summary,addSummary] = useState({
     Summary: "",
     
   })
 
-
+// 
   const [input,setInput] = useState("");
 
   const [skills,setSkills] = useState([]);
 
+  // 
   const [Input,SetInput] = useState({
       CompanyName:"",
       JobTitle:"",
@@ -79,11 +82,11 @@ function App() {
         <Routes>
           <Route path='/' element={< Hero />}/>
           <Route path='/instrution' element={< Instruction />}/>
-          <Route path='/personalInfo' element={< PersonalInfo info={info} addinfo={addInfo} />}/>
+          <Route path='/personalInfo' element={< PersonalInfo info={info} addinfo={addInfo} expriance={expriance}/>}/>
           <Route path='/yourExpriance' element={< Expriance info={info} Input={Input} setInput={SetInput} expriance={expriance} AddExpriance={addExpriance}/>}/>
-          <Route path='/yourEducation' element={< Education info={info} addEducation={addEducation}/>}/>
-          <Route path='/yourSkill' element={< Skill info={info} input={input} setInput={setInput} skills={skills} setSkills={setSkills}/>}/>
-          <Route path='/yourSummary' element={< Summary info={info} addSummary={addSummary}/>}/>
+          <Route path='/yourEducation' element={< Education info={info} addEducation={addEducation} expriance={expriance}/>}/>
+          <Route path='/yourSkill' element={< Skill info={info} input={input} setInput={setInput} skills={skills} setSkills={setSkills} expriance={expriance}/>}/>
+          <Route path='/yourSummary' element={< Summary info={info} addSummary={addSummary} expriance={expriance}/>}/>
           <Route path='/download' element={< Download />}/>
         </Routes>
       </Router>

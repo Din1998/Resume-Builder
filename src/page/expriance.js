@@ -297,7 +297,7 @@ export default function Expriance({info,Input,setInput,expriance,AddExpriance })
         </div>
       </div>
       <div className="col-md-6 live__section">
-        <LiveBoard personalInfo={info}/>
+        <LiveBoard personalInfo={info} expriance={expriance}/>
       </div>
     </div>
   </div>
