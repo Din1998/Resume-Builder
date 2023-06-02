@@ -34,7 +34,7 @@
   left: 0;
   right: 0;
   margin: auto;
-  width: 300px;
+  width: 240px;
   border-radius:12px;
   cursor: pointer;
   animation: animate 2s infinite ease alternate !important;
@@ -55,6 +55,15 @@
   overflow: hidden;
 }
 .group__logo img{
+  cursor: pointer;
   height: 34.285728454589844px;
   width: 153.68421936035156px;
+}
+
+.link{
+  text-decoration: none;
+  color: #ECB21D;
+}
+.link:hover{
+  color: white;
 }

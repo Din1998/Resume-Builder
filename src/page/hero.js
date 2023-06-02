@@ -33,7 +33,7 @@ export default function Hero(){
               />
               </Sphere>
           </Canvas>
-          <img className='glow__img' src={img}/>
+          <img className='glow__img' src={img} alt=""/>
       </div>
       </div>
 
@@ -41,11 +41,11 @@ export default function Hero(){
         <div className="col-md-12">
         <Marquee>
           <div className='group__logo'>
-            <img src={logo}/>
-            <img src={logo1}/>
-            <img src={logo2}/>
-            <img src={logo3}/>
-            <img src={logo4}/>
+            <img src={logo} alt=""/>
+            <img src={logo1} alt=""/>
+            <img src={logo2} alt=""/>
+            <img src={logo3} alt=""/>
+            <img src={logo4} alt=""/>
       
           </div>
         </Marquee>

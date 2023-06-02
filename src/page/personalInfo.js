@@ -2,7 +2,7 @@ import LiveBoard from "../components/liveBoard";
 import { Link } from "react-router-dom";
 
 
-export default function PersonalInfo({addinfo,info,expriance}){
+export default function PersonalInfo({addinfo,info,expriance,school,skills,summary}){
 
   console.log(info)
 
@@ -23,7 +23,7 @@ export default function PersonalInfo({addinfo,info,expriance}){
           <form className="py-2">
               <div class="row mb-3">
                 <div className="col-6">
-                  <label for="exampleInputEmail1" class="form-label">First Name</label>
+                  <label className="form-label">First Name</label>
                   <input 
                     name="FirstName"
                     ype="email" 
@@ -36,7 +36,7 @@ export default function PersonalInfo({addinfo,info,expriance}){
                   />
                 </div>
                 <div className="col-6">
-                  <label for="exampleInputEmail1" class="form-label">Last name</label>
+                  <label className="form-label">Last name</label>
                   <input 
                     name="LastName"
                     type="email" 
@@ -51,9 +51,9 @@ export default function PersonalInfo({addinfo,info,expriance}){
 
               {/*  */}
 
-              <div class="row mb-3">
+              <div className="row mb-3">
                 <div className="col-6">
-                  <label for="exampleInputEmail1" class="form-label">Addresss</label>
+                  <label className="form-label">Addresss</label>
                   <input 
                     name="Addresss"
                     type="text" 
@@ -65,7 +65,7 @@ export default function PersonalInfo({addinfo,info,expriance}){
                   />
                 </div>
                 <div className="col-6">
-                  <label for="exampleInputEmail1" class="form-label">Zip code</label>
+                  <label  className="form-label">Zip code</label>
                   <input 
                     name="ZipCode"
                     type="text" 
@@ -80,9 +80,9 @@ export default function PersonalInfo({addinfo,info,expriance}){
 
               {/*  */}
 
-              <div class="row mb-3">
+              <div className="row mb-3">
                 <div className="col-6">
-                  <label for="exampleInputEmail1" class="form-label">Email</label>
+                  <label className="form-label">Email</label>
                   <input 
                     name="Email"
                     type="email" 
@@ -94,7 +94,7 @@ export default function PersonalInfo({addinfo,info,expriance}){
                   />
                 </div>
                 <div className="col-6">
-                  <label for="exampleInputEmail1" class="form-label">Phone</label>
+                  <label  className="form-label">Phone</label>
                   <input 
                     name="Phone"
                     type="number" 
@@ -107,7 +107,7 @@ export default function PersonalInfo({addinfo,info,expriance}){
                 </div>
               </div>
           </form>
-          <div class="row mb-3">
+          <div className="row mb-3">
                 <div className="col-6">
                 <Link className="link" to='/instrution'><button className="mt-5 actn__btn">Back</button></Link>
                 </div>
@@ -118,7 +118,7 @@ export default function PersonalInfo({addinfo,info,expriance}){
           </div>
         </div>
         <div className="col-md-6 live__section">
-          <LiveBoard personalInfo={info} expriance={expriance}/>
+          <LiveBoard personalInfo={info} expriance={expriance} school={school} skills={skills} summary={summary} />
         </div>
       </div>
     </div>

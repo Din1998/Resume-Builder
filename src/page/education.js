@@ -1,13 +1,37 @@
 import LiveBoard from "../components/liveBoard";
 import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlusCircle} from '@fortawesome/free-solid-svg-icons'
 
-export default function Education({addEducation,info,expriance}){
+export default function Education({info,expriance,schoolInput, setSchool, school, addSchool,skills,summary}){
+
+console.log(school)
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
 
-  const handleChange = (e) => {
-    addEducation((prev) => ({...prev,[e.target.name]:e.target.value}))
+  
+  const onInputChange = (e) => {
+
+    setSchool((prev) => ({...prev,[e.target.name]:e.target.value}))
   }
 
+  // const onInputChange = (event) => {
+  //   setInput(event.target.value)
+  // }
+
+  const onFormSubmit = (event) => {
+    event.preventDefault();
+    addSchool([...school,schoolInput
+    
+    ]);
+    setSchool("")
+  }
   return(
     <div className="container-md py-5">
     <div className="row">
@@ -17,117 +41,254 @@ export default function Education({addEducation,info,expriance}){
           <p>Please fill out .</p>
         </div>
         <div>
-        <form className="py-2">
-            <div class="row mb-3">
+        <form className="py-2" onSubmit={onFormSubmit}>
+            <div className="row mb-3">
               <div className="col-6">
-                <label for="exampleInputEmail1" class="form-label">School Name</label>
+                <label className="form-label">Institute Name</label>
                 <input 
                   name="SchoolName"
                   type="text" 
-                  required="true" 
+                  required={true} 
                   className="form-control" 
                
                   aria-describedby="emailHelp" 
-                  onChange={handleChange}
+                  onChange={onInputChange}
               
                 />
               </div>
               <div className="col-6">
-                <label for="exampleInputEmail1" class="form-label">School Location</label>
+                <label  className="form-label">Institute Location</label>
                 <input 
                   name="SchoolLocation"
                   type="text" 
-                  required="true" 
+                  required={true} 
                   className="form-control" 
                  
                   aria-describedby="emailHelp" 
-                  onChange={handleChange}
+                  onChange={onInputChange}
                 />
               </div>
             </div>
 
             {/*  */}
 
-            <div class="row mb-3">
+            <div className="row mb-3">
               <div className="col-6">
-                <label for="exampleInputEmail1" class="form-label">Subject</label>
+                <label  className="form-label">Subject</label>
                 <input 
                   name="Subject"
                   type="text" 
-                  required="true" 
+                  required={true} 
                   className="form-control" 
                   
                   aria-describedby="emailHelp" 
-                  onChange={handleChange}
+                  onChange={onInputChange}
                 />
               </div>
               <div className="col-6">
-                <label for="exampleInputEmail1" class="form-label">Result</label>
+                <label  className="form-label">Result</label>
                 <input 
                   name="Result"
                   type="text" 
-                  required="true" 
+                  required={true} 
                   className="form-control" 
                   
                   aria-describedby="emailHelp" 
-                  onChange={handleChange}
+                  onChange={onInputChange}
                 />
               </div>
             </div>
 
             {/*  */}
 
-            <div class="row mb-3">
+            <div className="row mb-3">
               <div className="col-6">
-                <label for="exampleInputEmail1" class="form-label">Start Date</label>
+                <label className="form-label">Start Date</label>
                 <input 
                   name="StartDate"
                   type="date" 
-                  required="true" 
+                  required={true} 
                   className="form-control" 
                   
                   aria-describedby="emailHelp" 
-                  onChange={handleChange}
+                  onChange={onInputChange}
                 />
               </div>
               <div className="col-6">
-                <label for="exampleInputEmail1" class="form-label">End Date</label>
+                <label  className="form-label">End Date</label>
                 <input 
                   name="EndDate"
                   type="date" 
-                  required="true" 
+                  
                   className="form-control" 
                   
                   aria-describedby="emailHelp" 
-                  onChange={handleChange}
+                  onChange={onInputChange}
                 />
               </div>
             </div>
             {/*  */}
 
-            <div class="row mb-3">
+            <div className="row mb-3">
               <div className="col-6">
-              <div class="form-check py-3">
+              <div className="form-check py-3">
                 <input
                   name="Chacker" 
                   className="form-check-input" 
                   type="checkbox" 
                   value="Continue" 
                   
-                  onChange={handleChange}
+                  onChange={onInputChange}
                 />
-                <label class="form-check-label" for="flexCheckDefault">
+                <label className="form-check-label">
                   Continue
                 </label>
               </div>
+              {/* Modal */}
+              <div className="pt-4">
+                  <div className="add__more">
+                    <FontAwesomeIcon icon={faPlusCircle} className='add__icon' onClick={handleShow} />
+                    <p>Add More</p>
+                  </div>
+                  
+                  <Modal 
+                    show={show} 
+                    onHide={handleClose}  
+                    size="md"
+                    aria-labelledby="contained-modal-title-vcenter"
+                    centered
+                  >
+                    <Modal.Header closeButton>
+                      <Modal.Title>Add More Education History.</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <form className="py-2" onSubmit={onFormSubmit}>
+                          <div class="row mb-3">
+                            <div className="col-6">
+                              <label  className="form-label">Institute Name</label>
+                              <input 
+                                name="SchoolName"
+                                type="text" 
+                                required={true} 
+                                className="form-control" 
+                      
+                                aria-describedby="emailHelp" 
+                                onChange={onInputChange}
+                            
+                              />
+                            </div>
+                            <div className="col-6">
+                              <label  className="form-label">Institute Location</label>
+                              <input 
+                                name="SchoolLocation"
+                                type="text" 
+                                required={true} 
+                                className="form-control" 
+                              
+                                aria-describedby="emailHelp" 
+                                onChange={onInputChange}
+                              />
+                            </div>
+                          </div>
+
+                          {/*  */}
+
+                          <div classNam="row mb-3">
+                            <div className="col-6">
+                              <label  className="form-label">Subject</label>
+                              <input 
+                                name="Subject"
+                                type="text" 
+                                required={true} 
+                                className="form-control" 
+                                
+                                aria-describedby="emailHelp" 
+                                onChange={onInputChange}
+                              />
+                            </div>
+                            <div className="col-6">
+                              <label  className="form-label">Result</label>
+                              <input 
+                                name="Result"
+                                type="text" 
+                                required={true} 
+                                className="form-control" 
+                                
+                                aria-describedby="emailHelp" 
+                                onChange={onInputChange}
+                              />
+                            </div>
+                          </div>
+
+                          {/*  */}
+
+                          <div className="row mb-3">
+                            <div className="col-6">
+                              <label  className="form-label">Start Date</label>
+                              <input 
+                                name="StartDate"
+                                type="date" 
+                                required={true} 
+                                className="form-control" 
+                                
+                                aria-describedby="emailHelp" 
+                                onChange={onInputChange}
+                              />
+                            </div>
+                            <div className="col-6">
+                              <label  className="form-label">End Date</label>
+                              <input 
+                                name="EndDate"
+                                type="date" 
+                                
+                                className="form-control" 
+                                
+                                aria-describedby="emailHelp" 
+                                onChange={onInputChange}
+                              />
+                            </div>
+                          </div>
+                          {/*  */}
+
+                          <div className="row mb-3">
+                            <div className="col-6">
+                              <div className="form-check py-3">
+                                <input
+                                  name="Chacker" 
+                                  className="form-check-input" 
+                                  type="checkbox" 
+                                  value="Continue"
+                                
+                                  onChange={onInputChange}
+                                />
+                                <label className="form-check-label" for="flexCheckDefault">
+                                  Continue
+                                </label>
+                              </div>
+                              <div className="col-6">
+                            <button className="mt-3 actn__btn" onClick={handleClose}>Add</button>
+                            </div>
+                          </div>
+                          </div>
+                      </form>
+                    </Modal.Body>
+                    
+                  </Modal>
+
+
+                </div>
+                {/*  */}
               </div>
               <div className="col-6">
-               
+                <button className="mt-3 actn__btn">Add</button>
               </div>
+              
             </div>
 
+
+
         </form>
-        <div class="row mb-3">
+        <div className="row mb-3">
               <div className="col-6">
               <Link className="link" to='/yourExpriance'><button className="mt-5 actn__btn">Back</button></Link>
               </div>
@@ -138,7 +299,7 @@ export default function Education({addEducation,info,expriance}){
         </div>
       </div>
       <div className="col-md-6 live__section">
-        <LiveBoard personalInfo={info} expriance={expriance}/>
+        <LiveBoard personalInfo={info} expriance={expriance} school={school} skills={skills} summary={summary} />
       </div>
     </div>
   </div>

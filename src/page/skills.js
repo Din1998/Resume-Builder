@@ -2,7 +2,7 @@ import LiveBoard from "../components/liveBoard";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
 
-export default function Skill({input,setInput,skills,setSkills,info,expriance}){
+export default function Skill({input,setInput,skills,setSkills,info,expriance,school,summary}){
 
   const onInputChange = (event) => {
     setInput(event.target.value)
@@ -29,9 +29,9 @@ export default function Skill({input,setInput,skills,setSkills,info,expriance}){
         </div>
         <div>
         <form className="py-2" onSubmit={onFormSubmit}>
-            <div class="row mb-3">
+            <div className="row mb-3">
               <div className="col-6">
-                <label for="exampleInputEmail1" class="form-label">Add Skills</label>
+                <label  className="form-label">Add Skills</label>
                 <input 
                   name="SchoolName"
                   type="text" 
@@ -49,7 +49,7 @@ export default function Skill({input,setInput,skills,setSkills,info,expriance}){
 
            {/*  */}
 
-            <div class="row mb-3">
+            <div className="row mb-3">
               <div className="col-6 py-3">
              
               </div>
@@ -59,7 +59,7 @@ export default function Skill({input,setInput,skills,setSkills,info,expriance}){
             </div>
 
         </form>
-        <div class="row mb-3">
+        <div className="row mb-3">
               <div className="col-6 text-center">
               <Link className="link" to='/yourEducation'><button className="mt-5 actn__btn">Back</button></Link>
               </div>
@@ -70,7 +70,7 @@ export default function Skill({input,setInput,skills,setSkills,info,expriance}){
         </div>
       </div>
       <div className="col-md-6 live__section">
-        <LiveBoard personalInfo={info} expriance={expriance}/>
+        <LiveBoard personalInfo={info} expriance={expriance} school={school} skills={skills} summary={summary} />
       </div>
     </div>
   </div>
