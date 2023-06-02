@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusCircle} from '@fortawesome/free-solid-svg-icons'
 
 
-export default function Expriance({info,Input,setInput,expriance,AddExpriance }){
+export default function Expriance({info,Input,setInput,expriance,AddExpriance,school,skills,summary }){
 
   const [show, setShow] = useState(false);
 
@@ -46,11 +46,11 @@ export default function Expriance({info,Input,setInput,expriance,AddExpriance })
         <form className="py-2" onSubmit={onFormSubmit}>
             <div className="row mb-3">
               <div className="col-6">
-                <label for="exampleInputEmail1" className="form-label">Company name</label>
+                <label className="form-label">Company name</label>
                 <input 
                   name="CompanyName"
                   type="text" 
-                  required="true" 
+                  required={true} 
                   className="form-control" 
         
                   aria-describedby="emailHelp" 
@@ -63,7 +63,7 @@ export default function Expriance({info,Input,setInput,expriance,AddExpriance })
                 <input 
                   name="JobTitle"
                   type="text" 
-                  required="true" 
+                  required={true} 
                   className="form-control" 
                  
                   aria-describedby="emailHelp" 
@@ -80,7 +80,7 @@ export default function Expriance({info,Input,setInput,expriance,AddExpriance })
                 <input 
                   name="City"
                   type="text" 
-                  required="true" 
+                  required={true} 
                   className="form-control" 
                   
                   aria-describedby="emailHelp" 
@@ -92,7 +92,7 @@ export default function Expriance({info,Input,setInput,expriance,AddExpriance })
                 <input 
                   name="Country"
                   type="text" 
-                  required="true" 
+                  required={true} 
                   className="form-control" 
                   
                   aria-describedby="emailHelp" 
@@ -109,9 +109,8 @@ export default function Expriance({info,Input,setInput,expriance,AddExpriance })
                 <input 
                   name="StartDate"
                   type="date" 
-                  required="true" 
+                  required={true} 
                   className="form-control" 
-                  
                   aria-describedby="emailHelp" 
                   onChange={onInputChange}
                 />
@@ -121,9 +120,7 @@ export default function Expriance({info,Input,setInput,expriance,AddExpriance })
                 <input 
                   name="EndDate"
                   type="date" 
-                  
                   className="form-control" 
-                  
                   aria-describedby="emailHelp" 
                   onChange={onInputChange}
                 />
@@ -142,10 +139,11 @@ export default function Expriance({info,Input,setInput,expriance,AddExpriance })
                   
                     onChange={onInputChange}
                   />
-                  <label className="form-check-label" for="flexCheckDefault">
+                  <label className="form-check-label">
                     Continue
                   </label>
                 </div>
+
                 {/* ----Modal--- */}
                 <div className="pt-4">
                   <div className="add__more">
@@ -171,7 +169,7 @@ export default function Expriance({info,Input,setInput,expriance,AddExpriance })
                               <input 
                                 name="CompanyName"
                                 type="text" 
-                                required="true" 
+                                required={true} 
                                 className="form-control" 
                       
                                 aria-describedby="emailHelp" 
@@ -184,7 +182,7 @@ export default function Expriance({info,Input,setInput,expriance,AddExpriance })
                               <input 
                                 name="JobTitle"
                                 type="text" 
-                                required="true" 
+                                required={true} 
                                 className="form-control" 
                               
                                 aria-describedby="emailHelp" 
@@ -201,7 +199,7 @@ export default function Expriance({info,Input,setInput,expriance,AddExpriance })
                               <input 
                                 name="City"
                                 type="text" 
-                                required="true" 
+                                required={true} 
                                 className="form-control" 
                                 
                                 aria-describedby="emailHelp" 
@@ -213,7 +211,7 @@ export default function Expriance({info,Input,setInput,expriance,AddExpriance })
                               <input 
                                 name="Country"
                                 type="text" 
-                                required="true" 
+                                required={true} 
                                 className="form-control" 
                                 
                                 aria-describedby="emailHelp" 
@@ -230,7 +228,7 @@ export default function Expriance({info,Input,setInput,expriance,AddExpriance })
                               <input 
                                 name="StartDate"
                                 type="date" 
-                                required="true" 
+                                required={true} 
                                 className="form-control" 
                                 
                                 aria-describedby="emailHelp" 
@@ -263,7 +261,7 @@ export default function Expriance({info,Input,setInput,expriance,AddExpriance })
                                 
                                   onChange={onInputChange}
                                 />
-                                <label className="form-check-label" for="flexCheckDefault">
+                                <label className="form-check-label">
                                   Continue
                                 </label>
                               </div>
@@ -297,7 +295,7 @@ export default function Expriance({info,Input,setInput,expriance,AddExpriance })
         </div>
       </div>
       <div className="col-md-6 live__section">
-        <LiveBoard personalInfo={info} expriance={expriance}/>
+        <LiveBoard personalInfo={info} expriance={expriance} school={school} skills={skills} summary={summary} />
       </div>
     </div>
   </div>

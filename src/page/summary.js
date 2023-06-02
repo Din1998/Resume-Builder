@@ -2,7 +2,7 @@ import LiveBoard from "../components/liveBoard";
 import { Link } from "react-router-dom";
 
 
-export default function Summary({addSummary,info,expriance}){
+export default function Summary({addSummary,info,school,expriance,skills,summary}){
 
 
   const handleChange = (e) => {
@@ -22,7 +22,7 @@ export default function Summary({addSummary,info,expriance}){
         <form className="py-2">
             <div class="row mb-3">
               <div className="col-12">
-                <label for="exampleInputEmail1" class="form-label">Write Your Summary</label>
+                <label className="form-label">Write Your Summary</label>
                 <textarea 
                   name="Summary"
                   className="form-control" 
@@ -31,19 +31,13 @@ export default function Summary({addSummary,info,expriance}){
                   required="true"
                   onChange={handleChange}
                 />
+              </div>
 
-               
-              </div>
-              <div className="mt-5 col-3">
-              <button className="actn__btn">Add</button>
-              </div>
-              
-             
             </div>
 
            {/*  */}
 
-            <div class="row mb-3">
+            <div className="row mb-3">
               <div className="col-6 py-3">
              
               </div>
@@ -53,7 +47,7 @@ export default function Summary({addSummary,info,expriance}){
             </div>
 
         </form>
-        <div class="row mb-3">
+        <div className="row mb-3">
               <div className="col-6 text-center">
               <Link className="link" to='/yourEducation'><button className="mt-5 actn__btn">Back</button></Link>
               </div>
@@ -64,7 +58,7 @@ export default function Summary({addSummary,info,expriance}){
         </div>
       </div>
       <div className="col-md-6 live__section">
-        <LiveBoard personalInfo={info} expriance={expriance}/>
+        <LiveBoard personalInfo={info} expriance={expriance} school={school} skills={skills} summary={summary}/>
       </div>
     </div>
   </div>

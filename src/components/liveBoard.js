@@ -1,10 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone,faLocationDot,faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 
-export default function LiveBoard({personalInfo,expriance}){
+export default function LiveBoard({personalInfo,expriance,school,skills,summary}){
 
   console.log(personalInfo)
   console.log(expriance)
+  console.log(summary)
 
   return(
     <div className="liveBoard__component">
@@ -51,7 +52,8 @@ export default function LiveBoard({personalInfo,expriance}){
 
          <div className='row summary pt-4'>
           <h1>Summary</h1>
-          <p>HI ! I'm Dinislam, Front-end web developer. I've found interest in software engineering almost 2 years ago, especially in Front-end development. After that, I’ve self taught myself coding. I tried to build websites, different applications using HTML, CSS, and JavaScript. Then I dived into some Back-end things such as Express Js,MongoDB to understand how applications work from end-to-end.</p>
+          <p>{summary.Summary}</p>
+          
          </div>
         {/*  */}
         <div className='row expriance pt-4'>
@@ -63,7 +65,7 @@ export default function LiveBoard({personalInfo,expriance}){
               <div className="user">
                 <h1>{index.JobTitle}</h1>
                 <p>{index.CompanyName} {index.City} {index.Country}</p>
-                <p>{index.StartDate} = {index.Chacker}</p>
+                <p>{index.StartDate} / {index.Chacker} {index.EndDate}</p>
               </div>
               )
               })}
@@ -74,22 +76,22 @@ export default function LiveBoard({personalInfo,expriance}){
         <div className='row education pt-4'>
           <h1>Education</h1>
           <div className='school'>
-            <h1>Nawab</h1>
-            <div className='school_info'>
-              <p>Business</p>
-              <p>4.0</p>
-            </div>
-           
-            <p>Apr 2023 – Present</p>
-          </div>
-          <div className='school'>
-            <h1>National</h1>
-            <div className='school_info'>
-              <p>Business</p>
-              <p>4.0</p>
-            </div>
+          {school.map((index) => {
+                console.log(index)
+              return(
+                <div className='school'>
+                  <h1>{index.SchoolName}</h1>
+                  <p> {index.SchoolLocation}</p>
+                  <div className='school_info'>
+                    <p>{index.Subject}</p>
+                    <p>{index.Result}</p>
+                  </div>
+                  <p>{index.StartDate} / {index.Chacker} {index.EndDate}</p>
+                </div>
+             
+              )
+              })}
             
-            <p>Apr 2023 – Present</p>
           </div>
         </div>
         {/*  */}
@@ -97,11 +99,16 @@ export default function LiveBoard({personalInfo,expriance}){
           <h1>Skills</h1>
           <div className='skill'>
             <div className='skill_info'>
-              <p>Business</p>
-              <p>Business</p>
-              <p>Business</p>
-              <p>Business</p>
-              <p>4.0</p>
+            {skills.map((index) => {
+                console.log(index)
+              return(
+                <div className='school'>
+                  <p>{index.skills}</p>
+                  
+                </div>
+              )
+              })}
+              
             </div>
           </div>
         </div>
