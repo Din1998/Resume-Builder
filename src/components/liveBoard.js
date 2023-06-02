@@ -1,9 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPencil,faFilePdf,faPhone,faLocationDot,faPaperPlane} from '@fortawesome/free-solid-svg-icons'
+import { faPhone,faLocationDot,faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 
-export default function LiveBoard({personalInfo}){
+export default function LiveBoard({personalInfo,expriance}){
 
   console.log(personalInfo)
+  console.log(expriance)
 
   return(
     <div className="liveBoard__component">
@@ -56,15 +57,18 @@ export default function LiveBoard({personalInfo}){
         <div className='row expriance pt-4'>
           <h1>Experience</h1>
           <div className='company'>
-            <h1>Junior Frontend Developer</h1>
-            <p>Arena Phone Bd Ltd</p>
-            <p>Apr 2023 – Present</p>
+            {expriance.map((index) => {
+                console.log(index)
+              return(
+              <div className="user">
+                <h1>{index.JobTitle}</h1>
+                <p>{index.CompanyName} {index.City} {index.Country}</p>
+                <p>{index.StartDate} = {index.Chacker}</p>
+              </div>
+              )
+              })}
           </div>
-          <div className='company'>
-            <h1>Junior Frontend Developer(Intern)</h1>
-            <p>SST Tech Bd</p>
-            <p>Apr 2023 – Present</p>
-          </div>
+          
         </div>
         {/*  */}
         <div className='row education pt-4'>

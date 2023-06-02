@@ -2,7 +2,7 @@ import LiveBoard from "../components/liveBoard";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
 
-export default function Skill({input,setInput,skills,setSkills,info}){
+export default function Skill({input,setInput,skills,setSkills,info,expriance}){
 
   const onInputChange = (event) => {
     setInput(event.target.value)
@@ -70,7 +70,7 @@ export default function Skill({input,setInput,skills,setSkills,info}){
         </div>
       </div>
       <div className="col-md-6 live__section">
-        <LiveBoard personalInfo={info}/>
+        <LiveBoard personalInfo={info} expriance={expriance}/>
       </div>
     </div>
   </div>
